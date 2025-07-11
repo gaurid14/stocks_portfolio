@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFD580" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stocksportfolio.Registration">
+    <children>
+<!--        <ImageView fitHeight="557.0" fitWidth="786.0" layoutX="-4.0" layoutY="-9.0">-->
+<!--            <image>-->
+<!--                &lt;!&ndash;            <Image url="@sak.jpg" />&ndash;&gt;-->
+<!--            </image>-->
+<!--        </ImageView>-->
+        <AnchorPane layoutX="50.0" layoutY="63.0" prefHeight="271.0" prefWidth="500.0">
+            <children>
+                <Label layoutX="44.0" layoutY="30.0" prefHeight="17.0" prefWidth="84.0" text="First Name">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="63.0" layoutY="109.0" prefHeight="17.0" prefWidth="84.0" text="Email">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="216.0" layoutY="109.0" prefHeight="17.0" prefWidth="84.0" text="Username">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="361.0" layoutY="109.0" prefHeight="17.0" prefWidth="99.0" text="Phone Number">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="367.0" layoutY="30.0" prefHeight="17.0" prefWidth="84.0" text="Last Name">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="200.0" layoutY="30.0" prefHeight="17.0" prefWidth="99.0" text="Middle Name">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="44.0" layoutY="182.0" prefHeight="17.0" prefWidth="84.0" text="Password">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="196.0" layoutY="182.0" prefHeight="17.0" prefWidth="106.0" text="Confirm Password">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="firstName" layoutX="11.0" layoutY="57.0" />
+                <TextField fx:id="middleName" layoutX="174.0" layoutY="57.0" />
+                <TextField fx:id="lastName" layoutX="334.0" layoutY="57.0" />
+                <TextField fx:id="emailId" layoutX="12.0" layoutY="134.0" />
+                <TextField fx:id="username" layoutX="175.0" layoutY="134.0" />
+                <TextField fx:id="phoneNumber" layoutX="336.0" layoutY="134.0" />
+                <PasswordField fx:id="password" layoutX="12.0" layoutY="210.0" />
+                <PasswordField fx:id="confirmPassword" layoutX="174.0" layoutY="210.0" />
+            </children>
+        </AnchorPane>
+        <Label contentDisplay="CENTER" layoutX="217.0" layoutY="29.0" prefHeight="36.0" prefWidth="216.0" text="REGISTER HERE..">
+            <font>
+                <Font name="System Bold Italic" size="25.0" />
+            </font>
+        </Label>
+        <Button layoutX="468.0" layoutY="334.0" mnemonicParsing="false" onAction="#signUp" prefHeight="36.0" prefWidth="91.0" style="-fx-background-color: #3b5998;" text="Sign-up" />
+    </children>
+</AnchorPane>

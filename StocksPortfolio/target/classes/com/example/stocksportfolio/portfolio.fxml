@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane prefHeight="802.0" prefWidth="1538.0" style="-fx-background-color: #fafad2;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stocksportfolio.Portfolio">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="63.0" prefWidth="1538.0" style="-fx-background-color: #deb887;" text="Stocks Portfolio">
+            <font>
+                <Font name="Times New Roman Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="greet" layoutX="62.0" layoutY="76.0" prefHeight="35.0" prefWidth="230.0">
+            <font>
+                <Font name="Times New Roman" size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="portfolio_details" layoutX="107.0" layoutY="433.0" mnemonicParsing="false" onAction="#insertUserData" prefHeight="26.0" prefWidth="202.0" text="Insert Portfolio Details">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font>
+<!--            <effect>-->
+<!--                <Lighting diffuseConstant="1.55" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">-->
+<!--                    <bumpInput>-->
+<!--                        <Shadow />-->
+<!--                    </bumpInput>-->
+<!--                    <light>-->
+<!--                        <Light.Distant>-->
+<!--                            <color>-->
+<!--                                <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />-->
+<!--                            </color>-->
+<!--                        </Light.Distant>-->
+<!--                    </light>-->
+<!--                </Lighting>-->
+<!--            </effect>-->
+        </Button>
+        <TextField fx:id="nameOfStock" layoutX="107.0" layoutY="479.0" prefHeight="26.0" prefWidth="195.0" promptText="Name of stock" />
+        <TextField fx:id="purpose" layoutX="329.0" layoutY="479.0" prefHeight="26.0" prefWidth="124.0" promptText="Purpose" />
+        <TextField fx:id="buyingPrice" layoutX="485.0" layoutY="479.0" prefHeight="26.0" prefWidth="124.0" promptText="Buying Price" />
+        <TextField fx:id="quantity" layoutX="635.0" layoutY="479.0" prefHeight="26.0" prefWidth="124.0" promptText="Quantity" />
+        <DatePicker fx:id="buyingDate" layoutX="782.0" layoutY="477.0" prefHeight="26.0" prefWidth="139.0" promptText="Buying Date" />
+        <TextField fx:id="appUsed" layoutX="944.0" layoutY="477.0" prefHeight="26.0" prefWidth="159.0" promptText="Trading App" />
+        <TextField fx:id="notes" layoutX="1125.0" layoutY="477.0" prefHeight="26.0" prefWidth="159.0" promptText="notes" />
+        <!--        <Button fx:id="refresh" layoutX="35.0" layoutY="535.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="202.0" text="Refresh">-->
+<!--            <effect>-->
+<!--                <Lighting diffuseConstant="1.57" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">-->
+<!--                    <bumpInput>-->
+<!--                        <Shadow />-->
+<!--                    </bumpInput>-->
+<!--                    <light>-->
+<!--                        <Light.Distant>-->
+<!--                            <color>-->
+<!--                                <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />-->
+<!--                            </color>-->
+<!--                        </Light.Distant>-->
+<!--                    </light>-->
+<!--                </Lighting>-->
+<!--            </effect>-->
+<!--            <font>-->
+<!--                <Font name="Times New Roman" size="14.0" />-->
+<!--            </font></Button>-->
+        <Button layoutX="107.0" layoutY="541.0" onAction="#deleteRow" mnemonicParsing="false" prefHeight="26.0" prefWidth="202.0" text="Delete Portfolio Details">
+<!--            onAction="#setPerscriptionTable"-->
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font>
+<!--            <effect>-->
+<!--                <Lighting diffuseConstant="1.57" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">-->
+<!--                    <bumpInput>-->
+<!--                        <Shadow />-->
+<!--                    </bumpInput>-->
+<!--                    <light>-->
+<!--                        <Light.Distant>-->
+<!--                            <color>-->
+<!--                                <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />-->
+<!--                            </color>-->
+<!--                        </Light.Distant>-->
+<!--                    </light>-->
+<!--                </Lighting>-->
+<!--            </effect>-->
+        </Button>
+        <Button layoutX="1430.0" layoutY="63.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="105.0" text="Logout">
+<!--            onAction="#homepage"-->
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font>
+<!--            <effect>-->
+<!--                <Lighting diffuseConstant="1.55" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">-->
+<!--                    <bumpInput>-->
+<!--                        <Shadow />-->
+<!--                    </bumpInput>-->
+<!--                    <light>-->
+<!--                        <Light.Distant>-->
+<!--                            <color>-->
+<!--                                <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />-->
+<!--                            </color>-->
+<!--                        </Light.Distant>-->
+<!--                    </light>-->
+<!--                </Lighting>-->
+<!--            </effect>-->
+        </Button>
+        <TableView fx:id="perscTable" layoutX="107.0" layoutY="119.0" prefHeight="284.0" prefWidth="1293.0" AnchorPane.rightAnchor="138.0">
+            <columns>
+                <TableColumn fx:id="getRowNumber" prefWidth="67.99999237060547" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Sr no." >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="rowNumber" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="getNameOfStock" minWidth="0.0" prefWidth="227.39999389648438" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Name of Stock" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="nameOfStock" />
+                </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="getPurpose" minWidth="0.0" prefWidth="188.60006713867188" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Purpose" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="purpose" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="getBuyingPrice" minWidth="0.0" prefWidth="157.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Buying Price" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="buyingPrice" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="getQuantity" prefWidth="136.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Quantity" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="quantity" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="getBuyingDate" prefWidth="121.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Buying Date" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="buyingDate" />
+                    </cellValueFactory>
+            </TableColumn>
+                <TableColumn fx:id="getAppUsed" prefWidth="179.60003662109375" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Trading app" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="appUsed" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="getNotes" prefWidth="213.199951171875" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="notes" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="notes" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+<!--        <TextField fx:id="getPMid" layoutX="107.0" layoutY="480.0" prefHeight="25.0" prefWidth="211.0" promptText="Stock _Serial _number" AnchorPane.bottomAnchor="255.4" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="1219.8" AnchorPane.topAnchor="480.0" />-->
+    </children>
+</AnchorPane>
